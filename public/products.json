@@ -1,0 +1,98 @@
+[
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-1.png",
+      "name": "DISK BREAK",
+      "price": 99,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-2.png",
+      "name": "WHEEL FRAME",
+      "price": 99,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-3.png",
+      "name": "CAR STEERING",
+      "price": 99,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/20-1-300x300.jpg",
+      "name": "SWATCH VARIATION IMAGE",
+      "price": 59,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/19-1-300x300.jpg",
+      "name": "DISK BREAK",
+      "price": 60,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-4.png",
+      "name": "Font-End Camera",
+      "price": 25,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-12.png",
+      "name": "Auto Clutch & Brake",
+      "price": 16,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"5
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-9.png",
+      "name": "Leather Steering Wheel",
+      "price": 61,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"5
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-7.png",
+      "name": "Auto Clutch & Brake",
+      "price": 16,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"5
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-5.png",
+      "name": "Hanging 4K Camera",
+      "price": 86,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/17-1-300x300.jpg",
+      "name": "PERSPICIATIS UNDE OMNIS ISTE NATUS...",
+      "price": 70,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-11.png",
+      "name": "DISK BREAK",
+      "price": 15,
+      "min-quantity": 5,
+      "available": 50,
+      "shotDescription": "This is best products of BMW"0
+    }
+  ]
