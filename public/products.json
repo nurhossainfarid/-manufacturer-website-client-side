@@ -3,7 +3,7 @@
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-1.png",
       "name": "DISK BREAK",
       "price": 99,
-      "min-quantity": 5,
+      "minimumQuantity": 5,
       "available": 50,
       "shotDescription": "This is best products of BMW"
     },
@@ -11,88 +11,88 @@
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-2.png",
       "name": "WHEEL FRAME",
       "price": 99,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "minimumQuantity": 5,
+      "available": 20,
+      "shotDescription": "You easily buy it, because its perfect for your car."
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-3.png",
       "name": "CAR STEERING",
       "price": 99,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "minimumQuantity": 2,
+      "available": 30,
+      "shotDescription": "It is best for its color combination."
     },
     {
       "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/20-1-300x300.jpg",
       "name": "SWATCH VARIATION IMAGE",
       "price": 59,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "minimumQuantity": 5,
+      "available": 40,
+      "shotDescription": "We provide it low amount price. So, you easily buy it."
     },
     {
       "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/19-1-300x300.jpg",
       "name": "DISK BREAK",
       "price": 60,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "minimumQuantity": 3,
+      "available": 80,
+      "shotDescription": "We have best quality of its. Such as, Ford, BMW, JEEP etc."
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-4.png",
       "name": "Font-End Camera",
       "price": 25,
-      "min-quantity": 5,
+      "minimumQuantity": 5,
       "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "shotDescription": "We provide our customer its too much lower rate. So, every customer buy it without thinking..."
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-12.png",
       "name": "Auto Clutch & Brake",
-      "price": 16,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"5
+      "price": 165,
+      "minimumQuantity": 2,
+      "available": 20,
+      "shotDescription": "This is best products of Lexus"
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-9.png",
       "name": "Leather Steering Wheel",
-      "price": 61,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"5
+      "price": 615,
+      "minimumQuantity": 5,
+      "available": 55,
+      "shotDescription": "It is one of the best Steering"
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-7.png",
       "name": "Auto Clutch & Brake",
-      "price": 16,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"5
+      "price": 167,
+      "minimumQuantity": 10,
+      "available": 150,
+      "shotDescription": "Why you are waiting, because we provide it lower price..."
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-5.png",
       "name": "Hanging 4K Camera",
       "price": 86,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "minimumQuantity": 5,
+      "available": 120,
+      "shotDescription": "It is the most powerful and handsome camera for car"
     },
     {
       "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/17-1-300x300.jpg",
       "name": "PERSPICIATIS UNDE OMNIS ISTE NATUS...",
-      "price": 70,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"
+      "price": 700,
+      "minimumQuantity": 1,
+      "available": 10,
+      "shotDescription": "This is too much expensive because it provide high level service..."
     },
     {
       "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-11.png",
       "name": "DISK BREAK",
-      "price": 15,
-      "min-quantity": 5,
-      "available": 50,
-      "shotDescription": "This is best products of BMW"0
+      "price": 155,
+      "minimumQuantity": 1,
+      "available": 5,
+      "shotDescription": "Please buy hurry because this product is limited..."
     }
   ]
