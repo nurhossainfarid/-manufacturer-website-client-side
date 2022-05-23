@@ -1,12 +1,11 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const Login = () => {
-    const navigate = useNavigate();
      // sign in with google
     const
         [
@@ -28,19 +27,25 @@ const Login = () => {
         console.log(data);
         signInWithEmailAndPassword(data.email, data.password)
     }
+    
+    let signInError;
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     if (loading || gLoading) {
         return <Loading></Loading>
     }
 
     if (user || gUser) {
-        navigate('/home');
+        navigate(from, { replace: true });
     }
-    
-    let signInError;
+
     if (error || gError ) {
         signInError = <p className='text-red-500 mb-2'><small>{error?.message}</small></p>
     }
+
+
     return (
         <div className="card w-96 bg-base-100 shadow-xl mx-auto md:mt-32">
             <div className="card-body">

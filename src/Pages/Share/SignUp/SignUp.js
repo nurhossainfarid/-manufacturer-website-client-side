@@ -1,14 +1,12 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
-     // sign in with google
-    // const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    //     // sign in with email and password
-
+    const navigate = useNavigate();
     const [
         createUserWithEmailAndPassword,
         user,
@@ -22,6 +20,15 @@ const SignUp = () => {
     console.log(data);
         createUserWithEmailAndPassword(data.email, data.password)
     }
+
+    if (loading) {
+        return <Loading></Loading>
+    };
+
+    if (user) {
+        navigate('/home');
+    }
+
     let signInError;
     if (error ) {
         signInError = <p className='text-red-500 mb-2'><small>{error?.message}</small></p>
