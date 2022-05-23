@@ -17,7 +17,7 @@ const CarBroProduct = ({ product }) => {
                 <div className="card-body">
                     <h2 className="card-title text-2xl">{name}</h2>
                     <p>Message : {shotDescription}</p>
-                    <p className='font-semibold text-xl font-semibold'>Price : {price}</p>
+                    <p className='font-semibold text-xl'>Price : {price}</p>
                     <p className='text-xl font-bold'>Minimum Orders : {minimumQuantity}</p>
                     <p className='text-xl'>Available : {available}</p>
                     <div className="divider"></div> 

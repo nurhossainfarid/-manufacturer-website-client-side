@@ -1,10 +1,11 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import Loading from '../../Share/Loading/Loading';
 
 const Reviews = () => {
     const { data: reviews, isLoading } = useQuery('comments', () => fetch('http://localhost:5000/reviews').then(res => res.json()));
     if (isLoading) {
-        return <h2>Loading....</h2>
+        return <Loading></Loading>
     }
     return (
         <div className='px-20'>

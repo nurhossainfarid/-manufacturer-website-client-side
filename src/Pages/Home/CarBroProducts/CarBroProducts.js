@@ -1,11 +1,12 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import Loading from '../../Share/Loading/Loading';
 import CarBroProduct from '../CarBroProduct/CarBroProduct';
 
 const CarBroProducts = () => {
     const { data: products, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/products').then(res => res.json()));
     if (isLoading) {
-        return <h2>Loading....</h2>
+        return <Loading></Loading>
     }
     return (
         <div className='px-20'>

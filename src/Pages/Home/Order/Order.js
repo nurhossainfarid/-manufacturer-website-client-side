@@ -21,10 +21,10 @@ const Order = () => {
 
     return (
         <div>
-            <div class="card w-1/2 bg-base-100 shadow-xl mx-auto">
+            <div className="card w-1/2 bg-base-100 shadow-xl mx-auto">
                 <figure><img src={order.img} alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-3xl pb-3">Product-Name : {order.name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title text-3xl pb-3">Product-Name : {order.name}</h2>
                     <form className='grid grid-cols-1 gap-3' onSubmit={handleSubmit(onSubmit)}>
                         <label className='text-xl' htmlFor="#buyer">Your Name : </label>
                         <input id='buyer' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type='text' {...register("buyer")} />
@@ -37,21 +37,21 @@ const Order = () => {
                         <label className='text-xl' htmlFor="#quantity">Quantity : </label>         
                         <input id='quantity' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type="number" {...register("quantity", { min: `${order?.minimumQuantity}`, max: `${order?.available}` })} />
                         <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} />
-                        <div class="card-actions justify-end">
-                            <label for="order-details-modal" class="btn modal-button">Product Details</label>
+                        <div className="card-actions justify-end">
+                            <label for="order-details-modal" className="btn modal-button">Product Details</label>
                         </div>
                         
                         {/* <!-- The button to open modal --> */}
-                        <input type="checkbox" id="order-details-modal" class="modal-toggle" />
-                        <div class="modal">
-                        <div class="modal-box relative">
-                            <label for="order-details-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <input type="checkbox" id="order-details-modal" className="modal-toggle" />
+                        <div className="modal">
+                        <div className="modal-box relative">
+                            <label for="order-details-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                             <img src={order.img} alt="" />
-                            <h3 class="font-bold text-3xl">Product Name : {order.name}</h3>
-                            <p class="pt-4 text-xl">Message : {order.shotDescription}</p>
-                            <p class="pt-1 text-2xl font-bold">Minimum {order.minimumQuantity>1? 'Orders': 'Order'} : {order.minimumQuantity}</p>
-                            <p class="pt-1 text-2xl">Available : {order.available}</p>
-                            <p class="pt-1 text-2xl">Per Price : <span className='text-primary'>{order.price}</span></p>
+                            <h3 className="font-bold text-3xl">Product Name : {order.name}</h3>
+                            <p className="pt-4 text-xl">Message : {order.shotDescription}</p>
+                            <p className="pt-1 text-2xl font-bold">Minimum {order.minimumQuantity>1? 'Orders': 'Order'} : {order.minimumQuantity}</p>
+                            <p className="pt-1 text-2xl">Available : {order.available}</p>
+                            <p className="pt-1 text-2xl">Per Price : <span className='text-primary'>{order.price}</span></p>
                         </div>
                         </div>
                     </form>
