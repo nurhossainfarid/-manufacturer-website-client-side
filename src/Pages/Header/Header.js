@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../../images/carBro.png';
 
 const Header = () => {
     return (
@@ -12,17 +13,21 @@ const Header = () => {
                 <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><Link to={'/home'}>Home</Link></li>
                     <li><Link to={'/blogs'}>Blogs</Link></li>
+                    <li><Link to={'/login'}>Login </Link></li>
+                    <li><Link to={'/signup'}>Sign up</Link></li>
                 </ul>
                 </div>
-                <Link to={'/home'} className="normal-case text-5xl"><span className='text-primary'>.car</span><span className='text-secondary'>Bro</span></Link>
+                <Link to={'/home'} className="normal-case text-5xl flex"><img src={Logo} className='w-32' alt="" /></Link>
+                {/* <span className='text-primary'>.car</span><span className='text-secondary'>Bro</span> */}
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to={'/home'}>Home</Link></li>
                     <li><Link to={'/blogs'}>Blogs</Link></li>
                 </ul>
+                <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={Logo} className='w-32' alt="" /></Link>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end hidden md:block">
                 <ul className="menu menu-horizontal p-0 flex justify-center items-center">
                     <li><Link to={'/login'}>Login </Link></li>
                     <li>|</li>
