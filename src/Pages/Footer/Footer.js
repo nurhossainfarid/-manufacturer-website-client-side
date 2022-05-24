@@ -5,7 +5,7 @@ import { MdEmail, MdOutlineLocationOn } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <div className='grid md:grid-cols-4 px-6 md:px-12 gap-5 mt-10 bg-black py-10'>
+        <div className='grid md:grid-cols-4 px-6 md:px-12 gap-5 bg-black py-10'>
                 <section>
                 <h5 className='text-white font-bold text-2xl uppercase pb-5'>About Us</h5>
                 <div className='bg-primary h-1 w-24 mb-5'></div>

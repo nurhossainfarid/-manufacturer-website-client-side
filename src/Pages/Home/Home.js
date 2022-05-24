@@ -6,7 +6,7 @@ import Reviews from './Reviews/Reviews';
 
 const Home = () => {
     return (
-        <div>
+        <div className='pb-10'>
             <Banner></Banner>
             <CarBroProducts></CarBroProducts>
             <BusinessSummary></BusinessSummary>

@@ -60,14 +60,19 @@ const Order = () => {
                     <form className='grid grid-cols-1 gap-3' onSubmit={handleSubmit(onSubmit)}>
                         <label className='text-xl' htmlFor="#buyer">Your Name : </label>
                         <input id='buyer' value={user?.displayName} className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type='text' {...register("buyer")} disabled />
+
                         <label className='text-xl' htmlFor="#email">Your Email : </label>
                         <input id='email' value={user?.email} className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type='email' {...register("email")} disabled />
+
                         <label className='text-xl' htmlFor="#mobile">Your Number : </label>
                         <input id='mobile' name='phone' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type='tel' {...register("phone")} />
+
                         <label className='text-xl' htmlFor="#addressInfo">Your Address : </label>
                         <textarea name="address" id="addressInfo" className='border-2 text-2xl border-gray-300 rounded px-3 py-2' cols="30" rows="2" {...register("address")}></textarea>
+
                         <label className='text-xl' htmlFor="#quantity">Quantity : </label>         
                         <input id='quantity' name='quantity' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type="number" {...register("quantity", { min: `${orders?.minimumQuantity}`, max: `${orders?.available}` })} />
+                        
                         <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} />
                         <div className="card-actions justify-end">
                             <label htmlFor="order-details-modal" className="btn modal-button">Product Details</label>

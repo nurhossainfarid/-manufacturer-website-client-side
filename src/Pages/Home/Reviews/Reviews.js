@@ -17,10 +17,9 @@ const Reviews = () => {
                             <figure>
                                 <div className="avatar">
                                     <div className="w-40 ring ring-primary ring-offset-base-100 ring-offset-2">
-                                    <img src={review.img} alt="" />
+                                        <img src={review.img} alt="" />
                                     </div>
                                 </div>
-
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title">{review.name}</h2>
