@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import useToken from '../../CustomHooks/useToken';
 import Loading from '../Loading/Loading';
 
 const SignUp = () => {
@@ -26,16 +27,18 @@ const SignUp = () => {
         toast.success('Profile Updated');
     }
 
-    if (loading) {
+    const [token] = useToken(user);
+
+    if (loading || updating) {
         return <Loading></Loading>
     };
 
-    if (user) {
+    if (token) {
         navigate('/home');
     }
 
     let signInError;
-    if (error ) {
+    if (error || updatedError) {
         signInError = <p className='text-red-500 mb-2'><small>{error?.message}</small></p>
     }
     return (

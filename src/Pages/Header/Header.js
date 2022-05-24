@@ -37,7 +37,12 @@ const Header = () => {
             <div className="navbar-end hidden md:block">
                 <ul className="menu menu-horizontal p-0 flex justify-center items-center">
                     <li className='text-2xl'>
-                        {user ? <button onClick={logout}>Logout</button>: <Link to={'/login'}>Login </Link>}
+                        {user ?
+                        <>
+                            <Link to={'/dashboard'}>Dashboard</Link>
+                            <button onClick={logout}>Logout</button>
+                        </> : <Link to={'/login'}>Login </Link>}
+                        
                     </li>
                     <li className='text-2xl'>{
                         !user && '|'
