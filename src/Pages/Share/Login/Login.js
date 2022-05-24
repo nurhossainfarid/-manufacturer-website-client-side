@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const Login = () => {
+    const { register,formState: { errors }, handleSubmit } = useForm();
      // sign in with google
     const
         [
@@ -14,20 +15,15 @@ const Login = () => {
             gLoading,
             gError
         ] = useSignInWithGoogle(auth);
-    //     // sign in with email and password
+    
+    //   sign in with email and password
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    
-    const { register,formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = data => {
-        console.log(data);
-        signInWithEmailAndPassword(data.email, data.password)
-    }
-    
+
     let signInError;
     let navigate = useNavigate();
     let location = useLocation();
@@ -40,6 +36,12 @@ const Login = () => {
     if (user || gUser) {
         navigate(from, { replace: true });
     }
+    
+    const onSubmit = data => {
+        signInWithEmailAndPassword(data.email, data.password)
+    }
+    
+
 
     if (error || gError ) {
         signInError = <p className='text-red-500 mb-2'><small>{error?.message}</small></p>

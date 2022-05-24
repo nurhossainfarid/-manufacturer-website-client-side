@@ -1,7 +1,8 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../Loading/Loading';
 
@@ -12,13 +13,17 @@ const SignUp = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
-
+    ] = useCreateUserWithEmailAndPassword(auth);
     
-    const { register,formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = data => {
-    console.log(data);
-        createUserWithEmailAndPassword(data.email, data.password)
+    const [updateProfile, updating, updatedError] = useUpdateProfile(auth);
+    
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    
+    const onSubmit = async (data) => {
+        console.log(data);
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name ,});
+        toast.success('Profile Updated');
     }
 
     if (loading) {
@@ -50,8 +55,8 @@ const SignUp = () => {
                                     message: "Name is require"
                                   }
                              })} />
-                        <label class="label">
-                            {errors.name?.type === 'required' && <span class="label-text-alt text-red-500">{errors.name.message}</span>}
+                        <label className="label">
+                            {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
                         </label>
                     </div>
                     
@@ -99,13 +104,13 @@ const SignUp = () => {
                         </label>
                     </div>
 
-                    {/* password */}
+                    {/* phone */}
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text font-bold">Phone</span>
                         </label>
                         <input type="tel" className="input input-bordered w-full max-w-xs"
-                            {...register("phone", { 
+                            {...register("phoneNumber", { 
                                 required: {
                                     value: true,
                                     message: "Phone is require"
@@ -113,7 +118,6 @@ const SignUp = () => {
                              })} />
                         <label className="label">
                             {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
-                            {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                         </label>
                     </div>
                     {signInError}
