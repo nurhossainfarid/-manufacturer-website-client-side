@@ -4,7 +4,7 @@ import Loading from '../../Share/Loading/Loading';
 import UsersRow from './UsersRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading } = useQuery('make admin', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('make admin', () => fetch('http://localhost:5000/user', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -13,6 +13,7 @@ const MakeAdmin = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
+
 
     return (
         <div className='pl-5 h-screen my-5'>
@@ -35,7 +36,7 @@ const MakeAdmin = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map((user, index) => <UsersRow key={user._id} user={user} index={index} ></UsersRow>)
+                            users.map((user, index) => <UsersRow key={user._id} user={user} index={index} refetch={refetch} ></UsersRow>)
                         }
                     </tbody>
             </table>
