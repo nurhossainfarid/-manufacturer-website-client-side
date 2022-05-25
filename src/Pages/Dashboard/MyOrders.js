@@ -48,7 +48,7 @@ const MyOrders = () => {
                         }
                     </tbody>
                 </table>
-                </div>
+            </div>
         </div>
     );
 };
