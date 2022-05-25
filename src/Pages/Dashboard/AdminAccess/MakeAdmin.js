@@ -38,7 +38,7 @@ const MakeAdmin = () => {
                             users.map((user, index) => <UsersRow key={user._id} user={user} index={index} ></UsersRow>)
                         }
                     </tbody>
-                </table>
+            </table>
         </div>
     );
 };
