@@ -22,7 +22,7 @@ const CarBroProduct = ({ product }) => {
                     <p className='text-xl'>Available : {available}</p>
                     <div className="divider"></div> 
                     <div className="card-actions justify-end">
-                    <button onClick={() => navigateOrder(_id)} className="btn btn-primary hover:bg-white text-white hover:scale-150 hover:text-black">Buy Now</button>
+                        <button onClick={() => navigateOrder(_id)} className="btn btn-primary hover:bg-white text-white hover:scale-150 hover:text-black">Buy Now</button>
                     </div>
                 </div>
             </div>
