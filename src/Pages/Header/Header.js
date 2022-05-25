@@ -32,6 +32,11 @@ const Header = () => {
                 <ul className="menu menu-horizontal p-0">
                     <li className='text-2xl'><Link to={'/home'}>Home</Link></li>
                     <li className='text-2xl'><Link to={'/blogs'}>Blogs</Link></li>
+                    <li className='text-2xl'>
+                        {
+                            user && <Link to={'/dashboard'}>Dashboard</Link>
+                        }
+                    </li>
                 </ul>
                 <Link to={'/home'} className="normal-case text-5xl block md:hidden"><img src={Logo} className='w-32' alt="" /></Link>
             </div>
@@ -40,7 +45,6 @@ const Header = () => {
                     <li className='text-2xl'>
                         {user ?
                         <>
-                            <Link to={'/dashboard'}>Dashboard</Link>
                             <button onClick={logout}>Logout</button>
                         </> : <Link to={'/login'}>Login </Link>}
                         

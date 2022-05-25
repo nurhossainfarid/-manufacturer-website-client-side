@@ -30,7 +30,7 @@ const MyOrders = () => {
                 </ul>
             </div>
             <h2 className='text-5xl text-secondary font-semibold'>My Orders</h2>
-            <div className='bg-primary h-1 w-48  my-5'></div>
+            <div className='bg-primary h-1 w-48 my-5'></div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
