@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const AllOrdersRow = ({ord, index}) => {
+const AllOrdersRow = ({ ord, index , refetch}) => {
+    const [deletingOrder, setDeletingOrder] = useState(null);
     const { userName, userEmail,  Order, totalAmount , phone, address, _id } = ord;
-    const handleDelete = event => {
-        event.preventDefault();
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/orders/${id}`, {
+            method: "DELETE",
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res => res.json())
+        .then(data => {
+            setDeletingOrder(data);
+            refetch();
+        })
     }
     return (
         <tr>

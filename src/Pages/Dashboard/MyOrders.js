@@ -7,7 +7,7 @@ import OrdersRow from './OrdersRow';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth)
-    const { data: orders, isLoading } = useQuery('orders', () => fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/orders?email=${user?.email}`, {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -39,12 +39,13 @@ const MyOrders = () => {
                         <th>Name</th>
                         <th>Quantity</th>
                         <th>Total Price</th>
+                        <th>Payment</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <OrdersRow key={order._id} myOrder={order} index={index}></OrdersRow>)
+                            orders.map((order, index) => <OrdersRow key={order._id} myOrder={order} index={index} refetch={refetch}></OrdersRow>)
                         }
                     </tbody>
                 </table>

@@ -4,7 +4,7 @@ import Loading from '../../Share/Loading/Loading';
 import AllOrdersRow from './AllOrdersRow';
 
 const ManageAllOrders = () => {
-    const { data: orders, isLoading } = useQuery('manage orders', () => fetch('http://localhost:5000/orders', {
+    const { data: orders, isLoading, refetch } = useQuery('manage orders', () => fetch('http://localhost:5000/orders', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -34,12 +34,13 @@ const ManageAllOrders = () => {
                         <th>Total Amount</th>
                         <th>Phone</th>
                         <th>Address</th>
+                        <th>Payment</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <AllOrdersRow key={order._id} ord={order} index={index} ></AllOrdersRow>)
+                            orders.map((order, index) => <AllOrdersRow key={order._id} ord={order} index={index} refetch={refetch} ></AllOrdersRow>)
                         }
                     </tbody>
             </table>
