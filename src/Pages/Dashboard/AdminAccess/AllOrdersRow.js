@@ -4,7 +4,7 @@ const AllOrdersRow = ({ ord, index , refetch}) => {
     const [deletingOrder, setDeletingOrder] = useState(null);
     const { userName, userEmail,  Order, totalAmount , phone, address, _id } = ord;
     const handleDelete = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://limitless-forest-21583.herokuapp.com/orders/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

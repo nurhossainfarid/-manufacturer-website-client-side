@@ -15,7 +15,7 @@ const AddProduct = () => {
             img: data.img
         }
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://limitless-forest-21583.herokuapp.com/products', {
             method: "POST",
             headers: {
                 'content-type': 'application/json',

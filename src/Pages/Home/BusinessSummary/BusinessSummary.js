@@ -6,9 +6,10 @@ import { BsPeopleFill } from "react-icons/bs";
 
 const BusinessSummary = () => {
     return (
-        <section className='px-28'>
-            <h2 className='text-3xl text-center font-bold py-10'> Business Summary</h2>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-16'>
+        <section className='px-20 mt-[-200px]'>
+            <h2 className='text-3xl text-center font-bold pt-10'> Business <span className='text-primary'>Summary</span> </h2>
+            <div className='bg-primary h-1 w-36 mx-auto my-5 mb-10'></div>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-16 bg-white pl-10 md:pb-10'>
                 <div>
                     <FaFontAwesomeFlag className='text-8xl text-primary mb-5'></FaFontAwesomeFlag>
                     <div className="indicator">

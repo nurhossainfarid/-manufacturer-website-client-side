@@ -31,7 +31,7 @@ const AddReview = () => {
                 }
 
                 // send to server
-                fetch('http://localhost:5000/comments', {
+                fetch('https://limitless-forest-21583.herokuapp.com/comments', {
                     method: "POST",
                     headers: {
                         'content-type': 'application/json',

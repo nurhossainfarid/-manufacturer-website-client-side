@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Share/Loading/Loading';
 
 const Order = () => {
     const [user] = useAuthState(auth);
     const { orderId } = useParams();
-    const [orders, setOrders] = useState({});
 
-    const { register, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit , reset} = useForm();
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/order/${orderId}`)
-            .then(res => res.json())
-            .then(data => {
-                setOrders(data)
-            })
-    }, [user]);
+    const {data: orders, isLoading, refetch} = useQuery('buy product', () =>  fetch(`https://limitless-forest-21583.herokuapp.com/order/${orderId}`)
+    .then(res => res.json()))
+    
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
 
     const onSubmit = data => {
-        console.log(data);
         const order = {
             orderId: orders._id,
             Order: orders.name,
@@ -33,7 +33,7 @@ const Order = () => {
             address: data.address
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://limitless-forest-21583.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const Order = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            reset();
         })
         // if (data.quantity >= order.minimumQuantity && data.quantity <= order.available) {
         //     toast('Your order is done')

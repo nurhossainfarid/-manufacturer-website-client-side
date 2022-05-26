@@ -4,7 +4,7 @@ import Loading from '../../Share/Loading/Loading';
 import UsersRow from './UsersRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('make admin', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('make admin', () => fetch('https://limitless-forest-21583.herokuapp.com/user', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

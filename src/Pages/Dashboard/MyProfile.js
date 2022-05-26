@@ -20,7 +20,7 @@ const MyProfile = () => {
             education: data.education,
             facebook: data.facebook
         }
-            fetch(`http://localhost:5000/profile/${user?.email}`, {
+            fetch(`https://limitless-forest-21583.herokuapp.com/profile/${user?.email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

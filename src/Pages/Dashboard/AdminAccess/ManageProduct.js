@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import Loading from '../../Share/Loading/Loading';
 
 const ManageProduct = () => {
-    const { data: products, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/products').then(res => res.json()));
+    const { data: products, isLoading } = useQuery('tools', () => fetch('https://limitless-forest-21583.herokuapp.com/products').then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>
     }

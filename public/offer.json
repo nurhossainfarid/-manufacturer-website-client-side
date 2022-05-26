@@ -1,0 +1,32 @@
+[
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-12.png",
+      "name": "Auto Clutch & Brake",
+      "price": 165
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-9.png",
+      "name": "Leather Steering Wheel",
+      "price": 615
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-7.png",
+      "name": "Auto Clutch & Brake",
+      "price": 167
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-5.png",
+      "name": "Hanging 4K Camera",
+      "price": 86
+    },
+    {
+      "img":"https://demo.wpthemego.com/themes/sw_autusin/demo6/wp-content/uploads/2017/09/17-1-300x300.jpg",
+      "name": "PERSPICIATIS UNDE OMNIS ISTE NATUS...",
+      "price": 700
+    },
+    {
+      "img":"https://htmldemo.net/lukas/lukas/assets/img/product/product-11.png",
+      "name": "DISK BREAK",
+      "price": 155
+    }
+]

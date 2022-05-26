@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CarBroProduct.css';
 
-const CarBroProduct = ({ product }) => {
+const CarBroProduct = ({ product, refetch }) => {
     const { name, img, minimumQuantity, available, price, shotDescription, _id } = product;
     const navigate = useNavigate();
 

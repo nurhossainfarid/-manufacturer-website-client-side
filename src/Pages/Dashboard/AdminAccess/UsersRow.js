@@ -8,7 +8,7 @@ const UsersRow = ({ user, index, refetch }) => {
     }
         // admin role
         const makeAdmin = (email) => {
-            fetch(`http://localhost:5000/user/admin/${email}`, {
+            fetch(`https://limitless-forest-21583.herokuapp.com/user/admin/${email}`, {
                 method: "PUT",
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

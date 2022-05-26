@@ -4,7 +4,7 @@ import Loading from '../../Share/Loading/Loading';
 import AllOrdersRow from './AllOrdersRow';
 
 const ManageAllOrders = () => {
-    const { data: orders, isLoading, refetch } = useQuery('manage orders', () => fetch('http://localhost:5000/orders', {
+    const { data: orders, isLoading, refetch } = useQuery('manage orders', () => fetch('https://limitless-forest-21583.herokuapp.com/orders', {
         method: "GET",
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
