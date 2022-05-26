@@ -21,6 +21,11 @@ import MakeAdmin from './Pages/Dashboard/AdminAccess/MakeAdmin';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAdmin from './Pages/Dashboard/RequireAdmin';
 import Payment from './Pages/Dashboard/Payment';
+import ImproveReact from './Pages/Blogs/ImproveReact';
+import ManageStateDiffWay from './Pages/Blogs/ManageStateDiffWay';
+import PrototypicalInheritance from './Pages/Blogs/PrototypicalInheritance';
+import NotStateDirectly from './Pages/Blogs/NotStateDirectly';
+import UnitTest from './Pages/Blogs/UnitTest';
 
 function App() {
   return (
@@ -34,7 +39,13 @@ function App() {
             <Order></Order>
           </RequireAuth>
         }></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}>
+          <Route index element={<ImproveReact></ImproveReact>}></Route>
+          <Route path='manageState' element={<ManageStateDiffWay></ManageStateDiffWay>}></Route>
+          <Route path='prototypicalInheritance' element={<PrototypicalInheritance></PrototypicalInheritance>}></Route>
+          <Route path='notStateDirectly' element={<NotStateDirectly></NotStateDirectly>}></Route>
+          <Route path='unitTest' element={<UnitTest></UnitTest>}></Route>
+        </Route>
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
             <Route index element={<MyProfile></MyProfile>}></Route>
             <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
