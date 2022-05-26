@@ -10,7 +10,7 @@ const Offer = () => {
     }
 
     return (
-        <div className='px-20'>
+        <div className='px-20 mt-32'>
             <h2 className='text-3xl text-center font-bold pt-10'> Hot <span>Event</span></h2>
             <div className='bg-primary h-1 w-36 mx-auto my-5 mb-10'></div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>

@@ -8,7 +8,7 @@ const Brands = () => {
         return <Loading></Loading>
     }
     return (
-        <section className='p-20'>
+        <section className='p-20 pt-0'>
             <h2 className='text-3xl text-center font-bold pt-10'> Available <span className='text-primary'>Brands</span></h2>
             <div className='bg-primary h-1 w-36 mx-auto my-5 mb-10'></div>
             <div className='grid gird-cols-2 md:grid-cols-6'>
