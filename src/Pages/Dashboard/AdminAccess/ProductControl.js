@@ -12,7 +12,7 @@ const ProductControl = ({ product , setDeletingProduct}) => {
             <p className='text-xl font-bold'>Minimum Orders : {minimumQuantity}</p>
             <p className='text-xl'>Available : {available}</p>
             <div className="card-actions justify-end">
-            <label onClick={() => setDeletingProduct(product)} for="doctor-delete-modal" class="btn btn-error">Delete</label>
+            <label onClick={() => setDeletingProduct(product)} for="doctor-delete-modal" className="btn btn-error">Delete</label>
             </div>
         </div>
     </div>

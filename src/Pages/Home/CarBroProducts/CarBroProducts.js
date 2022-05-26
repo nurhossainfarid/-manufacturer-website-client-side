@@ -9,9 +9,10 @@ const CarBroProducts = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='px-20 mb-40'>
-            <h2 className='text-3xl text-center font-bold py-10'> Products</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className='px-20 mb-40 md:mb-60'>
+            <h2 className='text-3xl text-center font-bold pt-10'> Products</h2>
+            <div className='bg-primary h-1 w-36 mx-auto my-5 mb-16'></div>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0'>
                 {
                     products.map(product => <CarBroProduct key={product._id} product={product} refetch={refetch}></CarBroProduct>).slice(0, 6)
                 }

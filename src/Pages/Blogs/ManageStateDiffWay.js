@@ -3,10 +3,10 @@ import React from 'react';
 const ManageStateDiffWay = () => {
     return (
         <div>
-            <div class="card bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure><img className='w-1/2' src="https://miro.medium.com/max/596/1*7CnRgjqeM8lLTNeyvpJTgg.png" alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-2xl">What are the different ways to manage a state in a React Application?</h2>
+                <div className="card-body">
+                    <h2 className="card-title text-2xl">What are the different ways to manage a state in a React Application?</h2>
                     <p className='text-xl'>React uses an observable object as the state that observes what changes are made to the state and helps the component behave accordingly. For example, if we update the state of any component like the following the webpage will not re-render itself because React State will not be able to detect the changes made. <br />
                     Basically there are 4 or 5 types of ways manage a state in a React Application. <br />
                     <ul className='px-10'>
@@ -28,8 +28,8 @@ const ManageStateDiffWay = () => {
                         <span className='font-semibold'>URL state –</span> Data that exists on our URLs, including the pathname and query parameters.URL state is often missing as a category of state, but it is an important one. In many cases, a lot of major parts of our application rely upon accessing URL state. Try to imagine building a blog without being able to fetch a post based off of its slug or id that is located in the URL! 0T0here are undoubtedly more pieces of state that we could identify, but these are the major categories worth focusing on for most applications you build.
                     </p>    
                     </p>
-                    <div class="card-actions justify-end">
-                    <button class="btn btn-primary"><a href="https://www.freecodecamp.org/news/how-to-manage-state-in-your-react-apps#:~:text=The%20Four%20Kinds%20of%20React%20State%20to%20Manage&text=Local%20state,URL%20state" target='_blank'>Read More</a></button>
+                    <div className="card-actions justify-end">
+                    <button className="btn btn-primary"><a href="https://www.freecodecamp.org/news/how-to-manage-state-in-your-react-apps#:~:text=The%20Four%20Kinds%20of%20React%20State%20to%20Manage&text=Local%20state,URL%20state" target='_blank'>Read More</a></button>
                     </div>
                 </div>
             </div>

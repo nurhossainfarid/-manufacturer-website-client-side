@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const AllOrdersRow = ({ ord, index , refetch}) => {
+const AllOrdersRow = ({ ord, index , refetch, paid}) => {
     const [deletingOrder, setDeletingOrder] = useState(null);
     const { userName, userEmail,  Order, totalAmount , phone, address, _id } = ord;
     const handleDelete = id => {
@@ -25,7 +26,21 @@ const AllOrdersRow = ({ ord, index , refetch}) => {
             <td>{totalAmount}</td>
             <td>{phone}</td>
             <td>{address}</td>
-            <td><button onClick={() => handleDelete(_id)} className="btn btn-xs btn-primary">Delete</button></td>
+            <td>
+                {
+                    (totalAmount && !paid) && <button className='btn btn-xs btn-success'>UnPaid</button>
+                }
+                {
+                    (totalAmount && paid) && <>
+                        <p><span className='text-success'>Paid</span></p>
+                    </>
+                }
+            </td>
+            <td>
+            {
+                (totalAmount && !paid) &&  <button onClick={() => handleDelete(_id)} className="btn btn-xs btn-primary">Delete</button>
+            }
+            </td>
         </tr>
     );
 };

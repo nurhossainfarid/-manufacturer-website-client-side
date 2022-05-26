@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Share/Loading/Loading';
 
@@ -11,7 +9,7 @@ const Order = () => {
     const [user] = useAuthState(auth);
     const { orderId } = useParams();
 
-    const { register, formState: { errors }, handleSubmit , reset} = useForm();
+    const { register, handleSubmit , reset} = useForm();
 
     const {data: orders, isLoading} = useQuery('buy product', () =>  fetch(`https://limitless-forest-21583.herokuapp.com/order/${orderId}`)
     .then(res => res.json()))
@@ -73,8 +71,7 @@ const Order = () => {
                         <label className='text-xl' htmlFor="#quantity">Quantity : </label>         
                         <input id='quantity' name='quantity' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type="number" {...register("quantity", { min: `${orders?.minimumQuantity}`, max: `${orders?.available}` })} />
                         
-                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} disabled={errors.orders?.type === 'min' || errors.orders?.type === 'max'} />
-
+                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} />
                         <div className="card-actions justify-end">
                             <label htmlFor="order-details-modal" className="btn modal-button">Product Details</label>
                         </div>
