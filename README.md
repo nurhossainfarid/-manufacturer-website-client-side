@@ -10,7 +10,8 @@
 - When your are valid user you see dashboard. In dashboard, you see some nested route. If you are user , you see my orders and add review route(admin can't see those). If you are admin, you see manage orders, manage all products, add new product and make admin route(not allow for user). And My Profile allow all.
 ### frameworks, libraries used in my project.
 - React(Libraries)
-- Bootstrap and tailwind (css frameworks)
+- tailwind (css frameworks)
+- daisy ui (react component)
 - React Router 
 - React Firebase Hooks
 - Firebase(console.firebase.google.com)

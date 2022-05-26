@@ -13,7 +13,7 @@ const Order = () => {
 
     const { register, formState: { errors }, handleSubmit , reset} = useForm();
 
-    const {data: orders, isLoading, refetch} = useQuery('buy product', () =>  fetch(`https://limitless-forest-21583.herokuapp.com/order/${orderId}`)
+    const {data: orders, isLoading} = useQuery('buy product', () =>  fetch(`https://limitless-forest-21583.herokuapp.com/order/${orderId}`)
     .then(res => res.json()))
     
     if (isLoading) {
@@ -73,7 +73,8 @@ const Order = () => {
                         <label className='text-xl' htmlFor="#quantity">Quantity : </label>         
                         <input id='quantity' name='quantity' className='border-2 text-2xl border-gray-300 rounded px-3 py-2' type="number" {...register("quantity", { min: `${orders?.minimumQuantity}`, max: `${orders?.available}` })} />
                         
-                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} />
+                        <input type="submit" className='btn btn-primary hover:bg-black border-0 text-white  hover:text-xl text-lg w-32' value={'Confirm'} disabled={errors.orders?.type === 'min' || errors.orders?.type === 'max'} />
+
                         <div className="card-actions justify-end">
                             <label htmlFor="order-details-modal" className="btn modal-button">Product Details</label>
                         </div>
