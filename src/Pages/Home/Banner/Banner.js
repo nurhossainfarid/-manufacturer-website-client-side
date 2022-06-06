@@ -9,7 +9,6 @@ const Banner = () => {
             <div className="carousel w-full relative">
                     <div id="item1" className="carousel-item w-full">
                         <img style={{height: '700px'}} src="https://img.freepik.com/free-vector/car-led-lights-realistic-composition-with-dark-silhouette-automobile-with-dimmed-headlights-shadows-illustration_1284-28532.jpg?size=626&ext=jpg&uid=R62982774&ga=GA1.2.1043722416.1642986635" className="w-full relative" />
-                        <h3 className='absolute'>Slider 1</h3>
                     </div> 
                     <div id="item2" className="carousel-item w-full">
                         <img style={{height: '700px'}} src="https://img.freepik.com/free-vector/lightened-luxury-sedan-car-darkness-with-headlamps-rear-lights-lit-realistic-image-reflection_1284-28803.jpg?size=626&ext=jpg&uid=R62982774&ga=GA1.2.1043722416.1642986635" className="w-full" />

@@ -21,8 +21,24 @@ const Header = () => {
                 <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li className='text-2xl'><Link to={'/home'}>Home</Link></li>
                     <li className='text-2xl'><Link to={'/blogs'}>Blogs</Link></li>
-                    <li className='text-2xl'><Link to={'/login'}>Login </Link></li>
-                    <li className='text-2xl'><Link to={'/signup'}>Sign up</Link></li>
+                    <li className='text-2xl'>
+                        {
+                            user && <Link to={'/dashboard'}>Dashboard</Link>
+                        }
+                    </li>
+                    <li className='text-2xl'>
+                        {user ?
+                        <>
+                            <button onClick={logout}>Logout</button>
+                        </> : <Link to={'/login'}>Login </Link>}
+                        
+                    </li>
+                    <li className='text-2xl'>{
+                        !user && '|'
+                    }</li>
+                    <li className='text-2xl'>{
+                        !user && <Link to={'/signup'}>Sign up</Link>
+                    }</li>
                 </ul>
                 </div>
                 <Link to={'/home'} className="normal-case text-5xl flex"><img src={Logo} className='w-32' alt="" /></Link>
